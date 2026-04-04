@@ -1,0 +1,116 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+const fadeUp = (i: number) => ({
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.1 * i,
+      duration: 0.6,
+      ease: [0.25, 0.4, 0.25, 1] as const,
+    },
+  },
+});
+
+export default function Hero() {
+  return (
+    <section className="pt-28 pb-20 sm:pt-36 sm:pb-28 lg:pt-40 lg:pb-32 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+        {/* Text */}
+        <div className="flex flex-col gap-7">
+          <motion.span
+            variants={fadeUp(0)}
+            initial="hidden"
+            animate="visible"
+            className="text-teal text-xs font-medium uppercase tracking-[0.2em]"
+          >
+            KI-Inhaltsstoff-Scanner
+          </motion.span>
+
+          <motion.h1
+            variants={fadeUp(1)}
+            initial="hidden"
+            animate="visible"
+            className="font-serif text-[2.25rem] sm:text-[2.75rem] lg:text-[3.25rem] xl:text-[3.5rem] leading-[1.1] tracking-tight text-foreground"
+          >
+            Wei&szlig;t du wirklich was in den Produkten steckt die du deinem Kind gibst?
+          </motion.h1>
+
+          <motion.p
+            variants={fadeUp(2)}
+            initial="hidden"
+            animate="visible"
+            className="text-lg text-muted max-w-lg leading-relaxed"
+          >
+            Zwischen Studienlage und EU-Verbot liegen Jahre. SaferKid scannt und warnt &ndash; in Sekunden.
+          </motion.p>
+
+          <motion.div
+            variants={fadeUp(3)}
+            initial="hidden"
+            animate="visible"
+            className="flex flex-wrap gap-3 pt-1"
+          >
+            <a
+              href="#pricing"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-white font-medium rounded-full hover:scale-[1.02] hover:shadow-lg transition-all duration-200 text-sm"
+            >
+              Kostenlos laden
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a
+              href="#how-it-works"
+              className="inline-flex items-center px-6 py-3 border border-border text-foreground font-medium rounded-full hover:bg-background-alt hover:scale-[1.02] transition-all duration-200 text-sm"
+            >
+              Mehr erfahren
+            </a>
+          </motion.div>
+        </div>
+
+        {/* iPhone Mockup */}
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4, duration: 0.8, ease: [0.25, 0.4, 0.25, 1] as const }}
+          className="relative flex justify-center lg:justify-end"
+        >
+          <div className="relative w-[280px] sm:w-[300px]">
+            {/* iPhone 16 Pro frame */}
+            <div className="relative aspect-[393/852] w-full">
+              {/* Outer frame */}
+              <div className="absolute inset-0 rounded-[3rem] bg-[#1a1a1a] shadow-2xl shadow-black/10" />
+
+              {/* Screen bezel */}
+              <div className="absolute inset-[3px] rounded-[2.85rem] bg-black overflow-hidden">
+                {/* Dynamic Island */}
+                <div className="absolute top-3 left-1/2 -translate-x-1/2 w-[100px] h-[32px] bg-black rounded-full z-20" />
+
+                {/* Screenshot */}
+                <Image
+                  src="/screenshots/screenshot_1.png"
+                  alt="SaferKid App – Meine Produkte"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="300px"
+                />
+              </div>
+
+              {/* Side buttons */}
+              <div className="absolute -left-[2px] top-[120px] w-[3px] h-[32px] bg-[#2a2a2a] rounded-l" />
+              <div className="absolute -left-[2px] top-[170px] w-[3px] h-[56px] bg-[#2a2a2a] rounded-l" />
+              <div className="absolute -left-[2px] top-[235px] w-[3px] h-[56px] bg-[#2a2a2a] rounded-l" />
+              <div className="absolute -right-[2px] top-[190px] w-[3px] h-[72px] bg-[#2a2a2a] rounded-r" />
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

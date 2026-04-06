@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import ScanDemo from "./ScanDemo";
 
 const fadeUp = (i: number) => ({
   hidden: { opacity: 0, y: 24 },
@@ -73,42 +73,14 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* iPhone Mockup */}
+        {/* Scan Demo */}
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.8, ease: [0.25, 0.4, 0.25, 1] as const }}
           className="relative flex justify-center lg:justify-end"
         >
-          <div className="relative w-[280px] sm:w-[300px]">
-            {/* iPhone 16 Pro frame */}
-            <div className="relative aspect-[393/852] w-full">
-              {/* Outer frame */}
-              <div className="absolute inset-0 rounded-[3rem] bg-[#1a1a1a] shadow-2xl shadow-black/10" />
-
-              {/* Screen bezel */}
-              <div className="absolute inset-[3px] rounded-[2.85rem] bg-black overflow-hidden">
-                {/* Dynamic Island */}
-                <div className="absolute top-3 left-1/2 -translate-x-1/2 w-[100px] h-[32px] bg-black rounded-full z-20" />
-
-                {/* Screenshot */}
-                <Image
-                  src="/screenshots/screenshot_1.png"
-                  alt="SaferKid App – Meine Produkte"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="300px"
-                />
-              </div>
-
-              {/* Side buttons */}
-              <div className="absolute -left-[2px] top-[120px] w-[3px] h-[32px] bg-[#2a2a2a] rounded-l" />
-              <div className="absolute -left-[2px] top-[170px] w-[3px] h-[56px] bg-[#2a2a2a] rounded-l" />
-              <div className="absolute -left-[2px] top-[235px] w-[3px] h-[56px] bg-[#2a2a2a] rounded-l" />
-              <div className="absolute -right-[2px] top-[190px] w-[3px] h-[72px] bg-[#2a2a2a] rounded-r" />
-            </div>
-          </div>
+          <ScanDemo />
         </motion.div>
       </div>
     </section>

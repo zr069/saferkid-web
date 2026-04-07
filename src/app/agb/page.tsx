@@ -54,7 +54,7 @@ export default function AGB() {
               </h2>
               <ul className="list-disc pl-5 space-y-1">
                 <li>SaferKid Pro Monthly: 2,99 € / Monat</li>
-                <li>SaferKid Pro Yearly: 49,99 € / Jahr</li>
+                <li>SaferKid Pro Yearly: 19,99 € / Jahr</li>
                 <li>SaferKid Pro Lifetime: 99,99 € einmalig</li>
               </ul>
             </section>

@@ -36,9 +36,9 @@ const plans = [
   },
   {
     name: "Pro Jahresabo",
-    price: "49,99",
+    price: "19,99",
     period: "pro Jahr",
-    description: "Spare \u00fcber 58\u00a0% gegen\u00fcber monatlich.",
+    description: "Spare 44\u00a0% gegen\u00fcber monatlich.",
     features: [
       "Unbegrenzte Scans",
       "Detaillierte Studien & Quellen",

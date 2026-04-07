@@ -8,6 +8,9 @@ export default function Footer() {
           </a>
 
           <div className="flex items-center gap-6 text-sm text-muted">
+            <a href="/agb" className="hover:text-foreground transition-colors">
+              AGB
+            </a>
             <a href="/datenschutz" className="hover:text-foreground transition-colors">
               Datenschutz
             </a>

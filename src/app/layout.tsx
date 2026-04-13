@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   title: "SaferKid – Wisse was drin ist.",
   description:
     "SaferKid scannt Inhaltsstoffe in Babyprodukten mit KI und warnt dich vor bedenklichen Stoffen – in Sekunden.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "SaferKid – Wisse was drin ist.",
     description:

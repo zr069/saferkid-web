@@ -56,7 +56,9 @@ export default function Hero() {
             className="flex flex-wrap gap-3 pt-1"
           >
             <a
-              href="#pricing"
+              href="https://apps.apple.com/de/app/saferkid/id6761647657"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-white font-medium rounded-full hover:scale-[1.02] hover:shadow-lg transition-all duration-200 text-sm"
             >
               Kostenlos laden

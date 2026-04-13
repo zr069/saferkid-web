@@ -149,7 +149,7 @@ export default function Pricing() {
               </ul>
 
               <a
-                href="https://apps.apple.com"
+                href="https://apps.apple.com/de/app/saferkid/id6761647657"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-2.5 rounded-full text-sm font-semibold transition-all duration-200 text-center block bg-foreground text-white hover:scale-[1.02] hover:shadow-md"

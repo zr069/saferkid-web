@@ -9,7 +9,9 @@ export default function Navbar() {
         </a>
 
         <a
-          href="#pricing"
+          href="https://apps.apple.com/de/app/saferkid/id6761647657"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-sm bg-foreground text-white font-medium px-5 py-2 rounded-full hover:scale-[1.02] hover:shadow-lg transition-all duration-200"
         >
           App laden
